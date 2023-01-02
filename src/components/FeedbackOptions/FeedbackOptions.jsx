@@ -1,19 +1,21 @@
+import { List, Button } from './FeedbackOptions.styled';
+
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const handleClick = event => {
     onLeaveFeedback(event.target.name);
   };
 
   return (
-    <ul>
+    <List>
       {options.map(option => {
         return (
           <li key={option}>
-            <button type="button" name={option} onClick={handleClick}>
+            <Button type="button" name={option} onClick={handleClick}>
               {option}
-            </button>
+            </Button>
           </li>
         );
       })}
-    </ul>
+    </List>
   );
 };

@@ -1,4 +1,4 @@
-import { List } from './Statistics.styled';
+import { List, Text, Stat } from './Statistics.styled';
 
 export const Statistics = ({
   good,
@@ -10,19 +10,29 @@ export const Statistics = ({
   return (
     <List>
       <li>
-        <p>Good: {good}</p>
+        <Text>
+          Good: <Stat>{good}</Stat>
+        </Text>
       </li>
       <li>
-        <p>Neutral: {neutral}</p>
+        <Text>
+          Neutral: <Stat>{neutral}</Stat>
+        </Text>
       </li>
       <li>
-        <p>Bad: {bad}</p>
+        <Text>
+          Bad: <Stat>{bad}</Stat>
+        </Text>
       </li>
       <li>
-        <p>Total: {total}</p>
+        <Text>
+          Total: <Stat>{total}</Stat>
+        </Text>
       </li>
       <li>
-        <p>Positive feedback: {positivePercentage}%</p>
+        <Text>
+          Positive feedback: <Stat>{positivePercentage}%</Stat>
+        </Text>
       </li>
     </List>
   );
