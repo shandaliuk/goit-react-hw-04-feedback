@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { SolidSection, Heading } from './Section.styled';
 
 export const Section = ({ title, children }) => {
@@ -7,4 +8,9 @@ export const Section = ({ title, children }) => {
       {children}
     </SolidSection>
   );
+};
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
 };
